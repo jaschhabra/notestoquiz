@@ -24,3 +24,6 @@ gem "devise", ">= 2.1.2"
 gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
 gem 'dropbox-api', '>=0.02'
+group :development do
+  gem 'heroku_san'
+end
