@@ -22,7 +22,7 @@ module Notestoquiz
     config.generators do |g|
       g.view_specs false
       g.helper_specs false
-      
+
     end
 
     # Settings in config/environments/* take precedence over those specified here.
@@ -32,6 +32,8 @@ module Notestoquiz
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
     config.autoload_paths += %W(#{config.root}/lib)
+
+    config.assets.initialize_on_precompile = false
 
 
     # Only load the plugins named here, in the order given (default is alphabetical).
