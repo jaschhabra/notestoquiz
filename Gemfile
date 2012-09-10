@@ -6,7 +6,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
-gem 'newrelic_rpm'
+gem 'newrelic_rpm' , :group => :production
 gem 'jquery-rails'
 gem "haml", ">= 3.1.7"
 gem "haml-rails", ">= 0.3.5", :group => :development
@@ -24,6 +24,14 @@ gem "devise", ">= 2.1.2"
 gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
 gem 'dropbox-api', '>=0.02'
+gem 'oauth2'
 group :development do
+  gem 'debugger'
   gem 'heroku_san'
 end
+group :development, :test do
+  gem 'ZenTest'
+  gem 'autotest-rails'
+  gem 'autotest-growl'
+end
+

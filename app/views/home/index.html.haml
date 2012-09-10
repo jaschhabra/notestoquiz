@@ -1,4 +1,16 @@
-%h3 Home
-- @users.each do |user|
-  %p
-    User: #{link_to user.name, user}
+%h2 Home
+%h3 Transfer Notes from Dropbox to Quiz
+-if user_signed_in?
+  -if current_user.dropbox_token.nil?
+    %p 
+      Setup step 1 of 2: Link dropbox account
+      = form_tag authorize_dropbox_path, :method => :post do
+        = submit_tag "Authorize Dropbox"
+  -elsif current_user.quizlet_token.nil?
+    %p 
+      Setup step 2 of 2: Link dropbox account
+      = form_tag authorize_quizlet_path, :method => :post do
+        = submit_tag "Authorize Quizlet"
+  -else
+    %p Both DropBox and Quizlet are now setup
+

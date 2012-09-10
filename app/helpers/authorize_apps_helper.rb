@@ -1,0 +1,2 @@
+module AuthorizeAppsHelper
+end
